@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router-dom'
 import { authApi } from '@/api/auth'
 import { useAuthStore } from '@/store/authStore'
 import { useToast } from '@/contexts/ToastContext'
-import { Input } from '@/components/ui/Input'
-import { Button } from '@/components/ui/Button'
 import { getErrorMessage } from '@/lib/utils'
 import { Warehouse, Package, TrendingUp, Shield, BarChart3 } from 'lucide-react'
 

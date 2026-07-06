@@ -50,7 +50,7 @@ export function ItemsPage() {
   const [taskMap, setTaskMap] = useState<Record<string, { taskId: string; status: TaskStatus }>>({})
 
   const { data = [], isLoading } = useQuery({ queryKey: ['items'], queryFn: itemsApi.getAll })
-  const { data: categories = [] } = useQuery({ queryKey: ['categories'], queryFn: categoriesApi.getAll })
+  const { data: categories = [] } = useQuery({ queryKey: ['categories'], queryFn: () => categoriesApi.getAll() })
   const { data: brands = [] } = useQuery({ queryKey: ['brands'], queryFn: brandsApi.getAll })
 
   const { mutate: save, isPending: saving } = useMutation({

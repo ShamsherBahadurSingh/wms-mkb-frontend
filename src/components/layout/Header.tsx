@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAuthStore } from '@/store/authStore'
 import { authApi } from '@/api/auth'
 import { useToast } from '@/contexts/ToastContext'
-import { LogOut, User, ChevronDown, Bell } from 'lucide-react'
+import { LogOut, ChevronDown, Bell } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 
 export function Header() {

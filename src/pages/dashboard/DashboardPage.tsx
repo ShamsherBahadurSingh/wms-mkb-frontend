@@ -12,7 +12,7 @@ export function DashboardPage() {
   const { user } = useAuthStore()
 
   const { data: brands } = useQuery({ queryKey: ['brands'], queryFn: brandsApi.getAll })
-  const { data: categories } = useQuery({ queryKey: ['categories'], queryFn: categoriesApi.getAll })
+  const { data: categories } = useQuery({ queryKey: ['categories'], queryFn: () => categoriesApi.getAll() })
   const { data: items } = useQuery({ queryKey: ['items'], queryFn: itemsApi.getAll })
   const { data: attributes } = useQuery({ queryKey: ['attributes'], queryFn: () => attributesApi.getAll() })
   const { data: uoms } = useQuery({ queryKey: ['uom'], queryFn: uomApi.getAll })
